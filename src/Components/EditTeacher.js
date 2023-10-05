@@ -3,7 +3,7 @@ import Base from "../Base/Base";
 import { useParams } from "react-router-dom";
 
 
-export default function EditTeacher({teacherdatas, setTeacherdatas,history}){
+export default function EditTeacher({teacherdatas, setTeacherdatas, history}){
     
     const {id} = useParams();
     const [idx,setIdx] = useState("")
@@ -13,13 +13,14 @@ export default function EditTeacher({teacherdatas, setTeacherdatas,history}){
 
     const data = teacherdatas.find((teach) => teach.id === id)
     // console.log(data)
-    useEffect(()=>(
-        setIdx(data.id),
-        setName(data.Name),
-        setClasses(data.class),
-        setAddress(data.address)
-    ),[])
-        // console.log(id)
+    useEffect(() => {
+        setIdx(data.id);
+        setName(data.Name);
+        setClasses(data.class);
+        setAddress(data.address);
+        // eslint-disable-next-line
+    }, []);
+
     function editteacherdata(){
         const alterTeacher = {
             id:idx,
