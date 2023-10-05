@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-bootstrap";
 
 export default function Base({children}) {
   return (

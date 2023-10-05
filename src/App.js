@@ -10,6 +10,7 @@ import Teacher from './Components/Teacher';
 import AddNewTeacher from './Components/AddNewTeaccher';
 import EditTeacher from './Components/EditTeacher';
 import Home from './Base/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
